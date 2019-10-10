@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title text-center>
+      Music Library
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+        <ion-col>
+          <ion-item *ngFor = "let place of albumMusic" [routerLink]="['./', place.id]">
+          <ion-card>
+              <img [src]="place.imgUrl"><img>
+            <ion-card-header>
+              <ion-card-subtitle>{{place.artist}}</ion-card-subtitle>
+              <ion-card-title>{{place.name}}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

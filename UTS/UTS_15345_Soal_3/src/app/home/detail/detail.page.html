@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title text-center>{{ albumMusic.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  SONGS
+
+  <ion-list>
+    <ion-item *ngFor="let s of albumMusic.songs">
+      <ion-label>
+        <h5>{{ s.title }}</h5>
+        <p>{{ s.minute }} minutes {{ s.second }} seconds</p>
+      </ion-label>
+      <ion-icon name="heart" color="danger" (click)="favorit(s)"></ion-icon>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Your Favorite Musics</ion-title>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    <br>
+    SONGS
+  
+    <ion-list>
+        <!-- <div *ngIf="songs.length == 0" text-center>
+            <p>There are no favorites songs yet.</p>
+        </div> -->
+      <ion-item *ngFor="let x of myFetchedSong">
+        <ion-label>
+          <h5>{{ x.title }}</h5>
+          <p>{{ x.minute }} minutes {{ x.second }} seconds</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>
